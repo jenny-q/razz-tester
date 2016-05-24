@@ -10,7 +10,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
+   html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
@@ -24,7 +24,7 @@ html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
+ ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
 }
@@ -38,7 +38,7 @@ html {
  * A better looking default horizontal rule
  */
 
-hr {
+ hr {
     display: block;
     height: 1px;
     border: 0;
@@ -53,12 +53,12 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+ audio,
+ canvas,
+ iframe,
+ img,
+ svg,
+ video {
     vertical-align: middle;
 }
 
@@ -66,7 +66,7 @@ video {
  * Remove default fieldset styles.
  */
 
-fieldset {
+ fieldset {
     border: 0;
     margin: 0;
     padding: 0;
@@ -76,7 +76,7 @@ fieldset {
  * Allow only vertical resizing of textareas.
  */
 
-textarea {
+ textarea {
     resize: vertical;
 }
 
@@ -84,7 +84,7 @@ textarea {
    Browser Upgrade Prompt
    ========================================================================== */
 
-.browserupgrade {
+   .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
@@ -94,21 +94,63 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-h1, h2 {
+   h1, h2 {
     font-weight: 100;
 }
 .playfair {
     font-family: 'Amiri', serif;
 }
 .raleway {
-   font-family: 'Raleway', sans-serif;
+ font-family: 'Raleway', sans-serif;
 }
 body {
-   font-family: 'Raleway', sans-serif;
+ font-family: 'Raleway', sans-serif;
 }
+/*  navigation menu */
+#menu {
+    height: 800px;
+    position: fixed;
+    background: #3b3b3b;
+    width: 400px;
+    left: -400px;
+    top: 0;
+}
+ul.menu-list li:first-child{
+    text-align: left;
+    padding-left: 10px;
+}
+ul.menu-list li a.close:hover {
+    border: 1px solid transparent;
+    padding-left: 0px;
+}
+ul.menu-list li:2nd-child{
+    padding-top: 100px;
+    border:none;
+}
+ul.menu-list {
+    width: 100%;
+    padding-left: 0;
+}
+ul.menu-list li{
+    display: block;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 100;
+    padding: 0 0 85px 0;
+    text-align: center;
+}
+ul.menu-list li a{
+    color: #fff;
+}
+ul.menu-list li a:hover{
+    border:1px solid #fff;
+    padding: 10px 14px;
+}
+
+
 nav, section, footer {
     width: 100%;
-   margin: 0 auto;
+    margin: 0 auto;
 }
 nav {
     height: 85px;
@@ -120,14 +162,18 @@ nav {
 nav div {
     width: 96%;
     margin: 0 auto;
+    height: 85px;
+}
+.logo-div {
+    width: 30%;
+    display: inline-block;
 }
 nav ul.menu {
     padding-left: 15px;
     width: 33%;
 }
 nav ul.menu-right {
-    margin-left: 125px;
-    width: 14%;
+    margin-left: 10%;
 }
 nav ul.menu li {
     padding-right: 30px;
@@ -154,6 +200,31 @@ section .hero-image {
 }
 section div {
     display: inline-block;
+}
+.lux-hero div.text {
+    position: absolute;
+    top: 33%;
+    color: #fff;
+    left: 12%;
+    font-size: 1.8em;
+    text-align: center;
+}
+.lux-hero div.text:before {
+  content : "";
+  position: absolute;
+  left    : 0;
+  top  : 0;
+  height  : 1px;
+  width   : 30%;  /* or 100px */
+  border-bottom: 2px solid #e9a92f;
+}
+.lux-hero div.text:after {
+  content : "";
+  position: absolute;
+  right    : 0;
+  height  : 1px;
+  width   : 30%;  /* or 100px */
+  border-bottom:2px solid #e9a92f;
 }
 .slick-arrow {
     position: absolute;
@@ -185,10 +256,10 @@ section div {
 }
 .white-box div,.white-box2 div,.white-box3 div {
     width   : 75%;
-  height  : 50px;   
-  position: relative;
-  z-index : 1;
-  background-color:#fff;   
+    height  : 50px;   
+    position: relative;
+    z-index : 1;
+    background-color:#fff;   
 }
 
 .white-box div:before,
@@ -234,8 +305,8 @@ section div {
     margin: 0 auto;
 }
 .dark-box a {
-   text-decoration: none;
-   color: #fff;
+ text-decoration: none;
+ color: #fff;
 }
 .photo {
     width: 50%;
@@ -264,8 +335,11 @@ section div {
     width: 45%;
 }
 form#contact {
-    width: 50%;
+    width: 48%;
     float: right;
+    position: relative;
+    right: 3%;
+    padding: 130px 0 0 0;
 }
 ::webkit-input-placeholder,
 ::-moz-placeholder,
@@ -274,7 +348,12 @@ form#contact {
     color: #fff;
     opacity: 1;
 }
-
+.name {
+    width: 47%;
+}
+.email {
+    width: 97%;
+}
 input, select {
     line-height: normal;
     height: 50px;
@@ -283,11 +362,14 @@ input, select {
     color: #fff;
     border:1px solid #fff;
     margin-bottom: 15px;
+    width: 99%;
 }
 button#submit {
     background-color: #fff;
     width: 100%;
     color: #000;
+    padding: 11px 0;
+    border: 1px solid #fff;
 }
 div.map {
     background: url('../img/image-map.jpg')no-repeat center;
@@ -305,7 +387,7 @@ div.map {
 .location aside {
     display: inline-block;
     color: #fff;
-    padding-left: 50px;
+    padding-left: 30px;
     vertical-align: middle;
 }
 aside h1 {
@@ -326,7 +408,7 @@ aside h1:before {
 .location-text {
     background-color: #37373f;
     margin: 0 auto;
-    width: 65%;
+    width: 75%;
     display: block;
 }
 div.contact {
@@ -346,6 +428,7 @@ div.contact {
     padding: 50px 0 30px 0;
 }
 
+/* footer css  */
 footer {
     font-size: .75em;
     display: block;
@@ -358,6 +441,17 @@ footer .legal {
     font-size: 1em;
     margin-left: 3%;
     display: inline-block;
+    font-weight: 100;
+}
+footer .legal a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+footer .pets {
+    position: absolute;
+    right: 10%;
+    margin-top: 12px;
 }
 .arrow-up {
     width: 70px;
@@ -368,12 +462,46 @@ footer .legal {
 }
 
 /* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width : 769px) and (max-width: 1024px) { 
+    .lux-hero div.text {
+        font-size: 1.2em;
+    }
+    .menu-right, .menu li.desktop-only {
+        display: none;
+    }
+    .white-box, .dark-box .white-box2 {
+        font-size: 1em;
+    }
+    .white-box2 {
+        padding-top: 30px;
+    }
+    .white-box2 div {
+        width: auto;
+    }
+    .white-box h1, .white-box2 h1, .white-box3 h1 {
+        margin: 25px 0;
+    }
+    .photo {
+        width: 58%;
+    }
+    .location-text {
+        width: 93%;
+    }
+}
 @media only screen and (min-width : 769px) {
     .mobile-only {
         display: none;
     }
-    }
+}
 @media only screen and (max-width : 768px) {
+    #menu {
+        height: 800px;
+        position: fixed;
+        background: #3b3b3b;
+        width: 400px;
+        left: -400px;
+        top: 0;
+    }
     .desktop-only {
         display: none;
     }
@@ -421,6 +549,87 @@ footer .legal {
     }
 }
 
+@media only screen and (max-width :767px) {
+    nav {
+        height: 72px;
+    }
+    .logo-div {
+        width: 100%;
+        display: inline;
+        margin-left: 4%;
+    }
+
+    .lux-hero div.text {
+        top: 46%;
+        font-size: .75em;
+        text-align: center;
+    }
+    .right-arrow, .left-arrow {
+        top: 61%;
+        width: 15px;
+    }
+    .white-box div, .white-box2 div, .white-box3 div {
+        width: 75%;
+        height: inherit;
+    }
+    .white-box h1, .white-box2 h1, .white-box3 h1 {
+        margin: 25px 0;
+        font-weight: 100;
+        font-size: 1.4em;
+        line-height: 1.5em;
+    }
+    .dark-box h1 {
+        font-size: 1.3em;
+    }
+    ,dark-box h2 {
+        font-size: .8em;
+    }
+    .white-box2 {
+        width: 49%;
+        margin-left: 22%;
+        float: none;
+        padding: 25px 0;
+    }
+    .white-box3 {
+        padding: 25px 0;
+    }
+    form#contact {
+        padding: 25px 0;
+        right: 0;
+    }
+    aside h1:before {
+        width: 30%;
+        margin-top: 70px
+    }
+    .location-icon {
+        padding: 1% 37.5%;
+        width: 25%;
+    }
+    .contact h1 {
+        font-size: 1.3em;
+    }
+    .contact h2 {
+        font-size: 1em;
+    }
+    .social-media img {
+        width: 40px;
+        height: auto;
+    }
+    footer .pets {
+        position: absolute;
+        margin-top: 48px;
+        left: 2%;
+    }
+    footer .legal {
+        width: 75%;
+    }
+}
+/* some issues with space  */ 
+@media only screen and (max-width :485px) {
+    aside h1:before {
+        margin-top: 130px;
+    }
+}
 
 .clearfix:before,
 .clearfix:after {
