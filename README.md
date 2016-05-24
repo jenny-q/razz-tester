@@ -5,5 +5,6 @@ Started project by downloading standard *HTML5 boilerplate*, view [here](https:/
 
 Used jquery for menu effects, carousel effects were created using [slick.js](http://kenwheeler.github.io/slick/).
 
+[View hosted project.](http://jenny-q.github.io/)
 
 
